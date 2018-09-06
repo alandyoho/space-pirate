@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="theGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f3d-v2-41U">
+                                <rect key="frame" x="16" y="20" width="343" height="183"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="183" id="b3u-sa-av4"/>
+                                    <constraint firstAttribute="width" constant="343" id="eUf-uI-N3d"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oVo-br-iOf">
+                                <rect key="frame" x="79" y="323" width="217" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ARL-IY-rdn"/>
+                                    <constraint firstAttribute="width" constant="217" id="D6N-Qh-9GM"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Gl-om-PA7">
+                                <rect key="frame" x="79" y="323" width="217" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="217" id="55D-Cu-0G6"/>
+                                    <constraint firstAttribute="height" constant="21" id="CBo-aC-kIe"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="startGameButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="c2I-qg-EaZ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rnp-Sm-jJu">
+                                <rect key="frame" x="123" y="216" width="128" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="f3d-v2-41U" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="16" id="48o-Xj-GM5"/>
+                            <constraint firstItem="oVo-br-iOf" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="79" id="9lF-XX-86A"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="3Gl-om-PA7" secondAttribute="trailing" constant="79" id="9nx-go-3yd"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="oVo-br-iOf" secondAttribute="trailing" constant="79" id="CTf-4h-lRH"/>
+                            <constraint firstItem="Rnp-Sm-jJu" firstAttribute="top" secondItem="f3d-v2-41U" secondAttribute="bottom" constant="13" id="CsV-10-k7f"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="3Gl-om-PA7" secondAttribute="bottom" constant="323" id="FUH-cz-r3x"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="oVo-br-iOf" secondAttribute="bottom" constant="323" id="IPk-nx-pQM"/>
+                            <constraint firstItem="Rnp-Sm-jJu" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="123" id="IyO-GO-syJ"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="Rnp-Sm-jJu" secondAttribute="bottom" constant="323" id="JOe-Zq-j2I"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="Rnp-Sm-jJu" secondAttribute="trailing" constant="124" id="P0d-pm-IHe"/>
+                            <constraint firstItem="3Gl-om-PA7" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="79" id="WkP-WJ-OHJ"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="f3d-v2-41U" secondAttribute="trailing" constant="16" id="aUc-4g-TpD"/>
+                            <constraint firstItem="oVo-br-iOf" firstAttribute="top" secondItem="f3d-v2-41U" secondAttribute="bottom" constant="120" id="hPM-sU-ycl"/>
+                            <constraint firstItem="f3d-v2-41U" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" id="kfx-bI-Sxg"/>
+                            <constraint firstItem="3Gl-om-PA7" firstAttribute="top" secondItem="f3d-v2-41U" secondAttribute="bottom" constant="120" id="rdd-lf-ZLD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="p5R-Gd-lUc"/>
+                    <connections>
+                        <outlet property="countdownImageButton" destination="Rnp-Sm-jJu" id="Ofs-Za-aLe"/>
+                        <outlet property="gameImageView" destination="f3d-v2-41U" id="4wW-qr-OkO"/>
+                        <outlet property="startGameButton" destination="3Gl-om-PA7" id="Nz7-AS-BnV"/>
+                        <outlet property="startGameImageView" destination="oVo-br-iOf" id="Cpy-Aa-MPv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="488.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
